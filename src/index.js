@@ -13,8 +13,8 @@ const refs = {
 
 refs.input.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
-function onSearch(e) {
-  let name = e.target.value.trim().toLowerCase();
+function onSearch(event) {
+  let name = event.target.value.trim().toLowerCase();
   if (name === '') {
     refs.countryInfo.innerHTML = '';
     refs.countryList.innerHTML = '';
